@@ -20,6 +20,66 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   
   end
+
+  config.vm.define "adminwls2" , primary: true do |admin|
+    admin.vm.box = "centos-6.5-x86_64"
+    admin.vm.box_url = "https://dl.dropboxusercontent.com/s/np39xdpw05wfmv4/centos-6.5-x86_64.box"
+
+    admin.vm.hostname = "adminwls2.example.com"
+
+    admin.vm.network :private_network, ip: "10.10.10.21"
+  
+    admin.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1200"]
+      vb.customize ["modifyvm", :id, "--name", "adminwls2"]
+    end
+  
+  end
+
+  config.vm.define "adminwls3" , primary: true do |admin|
+    admin.vm.box = "centos-6.5-x86_64"
+    admin.vm.box_url = "https://dl.dropboxusercontent.com/s/np39xdpw05wfmv4/centos-6.5-x86_64.box"
+
+    admin.vm.hostname = "adminwls3.example.com"
+
+    admin.vm.network :private_network, ip: "10.10.10.22"
+  
+    admin.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1200"]
+      vb.customize ["modifyvm", :id, "--name", "adminwls3"]
+    end
+  
+  end
+
+  config.vm.define "adminwls4" , primary: true do |admin|
+    admin.vm.box = "centos-6.5-x86_64"
+    admin.vm.box_url = "https://dl.dropboxusercontent.com/s/np39xdpw05wfmv4/centos-6.5-x86_64.box"
+
+    admin.vm.hostname = "adminwls4.example.com"
+
+    admin.vm.network :private_network, ip: "10.10.10.23"
+  
+    admin.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "3500"]
+      vb.customize ["modifyvm", :id, "--name", "adminwls4"]
+    end
+  
+  end
+
+  config.vm.define "adminwls5" , primary: true do |admin|
+    admin.vm.box = "centos-6.5-x86_64"
+    admin.vm.box_url = "https://dl.dropboxusercontent.com/s/np39xdpw05wfmv4/centos-6.5-x86_64.box"
+
+    admin.vm.hostname = "adminwls5.example.com"
+
+    admin.vm.network :private_network, ip: "10.10.10.24"
+  
+    admin.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "2500"]
+      vb.customize ["modifyvm", :id, "--name", "adminwls5"]
+    end
+  
+  end
   
   config.vm.define "nodewls1" do |node1|
 

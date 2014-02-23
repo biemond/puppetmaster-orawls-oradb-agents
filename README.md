@@ -1,14 +1,16 @@
 puppetmaster clients for orawls,oradb modules
 =============================================
 
-use puppet client 3.4.3
+use puppet client 3.4.3 works together with my vagrant-puppetmaster github repos
 
-vagrant up oradb
+- vagrant up oradb (oracle database 11.2.0.4 )
+- vagrant up adminwls with nodewls1 & nodewls2 (cluster 10.3.6)
+- vagrant up adminwls2 ( adminserver 10.3.6 )
+- vagrant up adminwls3 ( adminserver 12.1.2 )
+- vagrant up adminwls4 ( adminserver + osb PS6 + soa suite PS6 ( with bpm & bam ))
+- vagrant up adminwls5 ( adminserver + osb PS6 )
 
-vagrant up adminwls or nodewls1 or nodewls2
-
-vagrant ssh adminwls or nodewls1 or nodewls2 or oradb
-
+vagrant ssh xxx
 
 su -
 use vagrant as password
