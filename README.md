@@ -10,19 +10,19 @@ use puppet client 3.4.3 works together with my vagrant-puppetmaster github repos
 - vagrant up adminwls4 ( adminserver + osb PS6 + soa suite PS6 ( with bpm & bam ))
 - vagrant up adminwls5 ( adminserver + osb PS6 )
 
-vagrant ssh xxx
+vagrant ssh xxx  
 
-su -
-use vagrant as password
+su -  
+use vagrant as password  
 
-service iptables stop
-echo "10.10.10.2 puppet.grahamgilbert.dev puppet"  >> /etc/hosts
+service iptables stop  
+echo "10.10.10.2 puppet.grahamgilbert.dev puppet"  >> /etc/hosts  
 
-cd /etc/puppet/
-vi puppet.conf
+cd /etc/puppet/  
+vi puppet.conf  
 
-add server to the main section
-[main]
-   server = puppet.grahamgilbert.dev
+add server to the main section  
+     [main]
+        server = puppet.grahamgilbert.dev
 
-puppet agent --test
+puppet agent --test  
